@@ -7,11 +7,11 @@ export default function TimerChallenge({ title, targetTime }) {
 
     const [timerStarted, setTimerStarted] = useState(false);
     const [timerExpired, setTimerExpired] = useState(false);
-    
+
     function handleStart() {
         timer.current = setTimeout(() => {
             setTimerExpired(true);
-            dialog.current.showModal();
+            dialog.current.open();
         }, targetTime * 1000);
 
         setTimerStarted(true);
