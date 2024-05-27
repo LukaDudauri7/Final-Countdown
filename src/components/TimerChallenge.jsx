@@ -10,18 +10,12 @@ export default function TimerChallenge({ title, targetTime }) {
 
     if(timeRemaining <= 0){
         clearInterval(timer.current);
-<<<<<<< HEAD
         dialog.current.open();
     }
 
     function handleReset() {
         setTimeRemaining(targetTime * 1000);
     }
-=======
-        setTimeRemaining(targetTime * 1000);
-        dialog.current.open();
-    }
->>>>>>> 7bfc027 (add interval instead of timeout)
 
     function handleStart() {
         timer.current = setInterval(() => {
